@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>₹4999 Redeem Code Giveaway</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0b10;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 10%, rgba(20, 184, 166, 0.15) 0%, transparent 50%);
+        }
+        .container {
+            width: 100%;
+            max-width: 420px;
+            position: relative;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .header-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #e2e8f0;
+            letter-spacing: 0.5px;
+        }
+        .green-dots {
+            color: #10b981;
+            letter-spacing: -2px;
+            font-size: 14px;
+        }
+        .live-count-badge {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #34d399;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+        }
+        .live-dot-green {
+            width: 6px;
+            height: 6px;
+            background-color: #34d399;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #34d399;
+        }
+
+        .sub-info {
+            text-align: center;
+            font-size: 11px;
+            color: #94a3b8;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .step-title {
+            font-size: 12px;
+            color: #f97316;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .step-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: rgba(249, 115, 22, 0.3);
+        }
+
+        /* Video Box Design */
+        .video-box {
+            background: #111118;
+            border: 2px solid #10b981;
+            border-radius: 16px;
+            padding: 4px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+        .live-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.6);
+            color: #f87171;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 25;
+        }
+        .red-dot-blink {
+            width: 6px;
+            height: 6px;
+            background-color: #ef4444;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Custom Play Overlay Button */
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+            cursor: pointer;
+        }
+        .play-icon-circle {
+            width: 60px;
+            height: 60px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: pulseBtn 1.5s infinite;
+        }
+        .play-icon-circle svg {
+            width: 24px;
+            height: 24px;
+            fill: #000000;
+            margin-left: 3px;
+        }
+        @keyframes pulseBtn {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .watch-heading {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 800;
+            color: #f97316;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+        .watch-sub {
+            text-align: center;
+            font-size: 11px;
+            color: #94a3b8;
+            margin-bottom: 4px;
+        }
+        .claims-count {
+            text-align: center;
+            font-size: 12px;
+            color: #34d399;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Reward Card Box with Multi-color Gradient Border */
+        .reward-card {
+            background: linear-gradient(145deg, rgba(20, 20, 30, 0.95), rgba(10, 10, 15, 0.98));
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .reward-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 2px;
+            background: linear-gradient(90deg, #ef4444, #a855f7, #3b82f6, #10b981);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .reward-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .reward-img-box {
+            width: 65px;
+            height: 65px;
+            background: #ffffff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+            padding: 4px;
+        }
+        .reward-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .badges-row {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+        .badge-new {
+            background: #ef4444;
+            color: white;
+            font-size: 9px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .badge-prem {
+            background: #a855f7;
+            color: white;
+            font-size: 9px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .reward-details h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+        .reward-details p {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+        .stars-row {
+            color: #fbbf24;
+            font-size: 11px;
+            margin-top: 2px;
+            letter-spacing: 1px;
+        }
+
+        /* Premium Glowing Claim Button with Continuous Glow Effect */
+        .claim-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+            animation: continuousGlow 2s infinite alternate;
+            transition: transform 0.2s ease;
+        }
+        .claim-btn:active {
+            transform: scale(0.97);
+        }
+        @keyframes continuousGlow {
+            0% {
+                box-shadow: 0 0 10px rgba(16, 185, 129, 0.4), inset 0 0 5px rgba(255, 255, 255, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 25px rgba(16, 185, 129, 0.9), inset 0 0 12px rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        /* Comments Section */
+        .comments-box {
+            background: #111118;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+        .comments-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 6px;
+        }
+        .comment-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 11px;
+        }
+        .comment-avatar {
+            width: 24px;
+            height: 24px;
+            background: #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+            font-size: 10px;
+        }
+        .comment-content .user-name {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+        .comment-content .comment-time {
+            color: #64748b;
+            font-size: 9px;
+            margin-left: 4px;
+        }
+        .comment-content .comment-text {
+            color: #cbd5e1;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="header-badge">
+                <span class="green-dots">••••</span> ₹4999 REDEEM CODE
+            </div>
+            <div class="live-count-badge">
+                <span class="live-dot-green"></span> 1,299 LIVE
+            </div>
+        </div>
+
+        <div class="sub-info">Unlimited Codes — Instant Claim</div>
+
+        <!-- Step 1 Title -->
+        <div class="step-title">STEP 01 — WATCH</div>
+
+        <!-- Video Box Container -->
+        <div class="video-box" id="videoContainer">
+            <div class="live-tag"><span class="red-dot-blink"></span> LIVE</div>
+            
+            <!-- Custom Play Button Overlay -->
+            <div class="play-overlay" id="playOverlay" onclick="playVideo()">
+                <div class="play-icon-circle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <video id="myVideo" loop playsinline controls preload="auto">
+                <source src="redeemvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Watch Heading & Sub -->
+        <div class="watch-heading">WATCH FULL VIDEO</div>
+        <div class="watch-sub">Complete the video to unlock your redeem code</div>
+        <div class="claims-count">4,696 claims in last hour</div>
+
+        <!-- Reward Card Box -->
+        <div class="reward-card">
+            <div class="reward-info">
+                <div class="reward-img-box">
+                    <!-- Yahan apni image ka naam theek kar sakte hain agar zaroorat ho -->
+                    <img src="redeem_icon.png" alt="Google Play Reward">
+                </div>
+                <div class="reward-details">
+                    <div class="badges-row">
+                        <span class="badge-new">NEW</span>
+                        <span class="badge-prem">PREMIUM</span>
+                    </div>
+                    <h3>₹4999 Redeem Code</h3>
+                    <p>Redeemcode Giveaway</p>
+                    <div class="stars-row">★★★★★</div>
+                </div>
+            </div>
+
+            <!-- TeraBox Link Added -->
+            <a href="https://1024terabox.com/s/1OIqKfe78ijQ04EOtv1LDPQ" target="_blank" class="claim-btn">
+                ⬇️ GET REDEEM CODE
+            </a>
+        </div>
+
+        <!-- Step 2 Title -->
+        <div class="step-title">STEP 02 — CLAIM</div>
+
+        <!-- Live Comments Section -->
+        <div class="comments-box">
+            <div class="comments-header">
+                <span>Live Comments <span style="color:#64748b;">(DEMO)</span></span>
+                <span>1,535 watching</span>
+            </div>
+            
+            <div class="comment-item">
+                <div class="comment-avatar" style="background:#3b82f6;">X</div>
+                <div class="comment-content">
+                    <div><span class="user-name">xKrishna387</span><span class="comment-time">5s ago</span></div>
+                    <div class="comment-text">Thanks bhai redeem code ke liye </div>
+                </div>
+            </div>
+
+            <div class="comment-item">
+                <div class="comment-avatar" style="background:#a855f7;">R</div>
+                <div class="comment-content">
+                    <div><span class="user-name">Rohan_Zone270</span><span class="comment-time">3s ago</span></div>
+                    <div class="comment-text">Working 100% real code mil gaya! </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playVideo() {
+            let vid = document.getElementById('myVideo');
+            let overlay = document.getElementById('playOverlay');
+
+            vid.muted = false;
+            vid.play().then(() => {
+                overlay.style.opacity = '0';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 300);
+            }).catch(error => {
+                console.log("Playback error:", error);
+            });
+        }
+    </script>
+</body>
+</html>
+
